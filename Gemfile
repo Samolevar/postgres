@@ -6,12 +6,18 @@ gem 'pg', '0.15.1'
 gem 'rake', '< 11.0'
 
 group :development, :test do
-	gem 'rspec-rails', '2.13.1'
+	gem 'rspec-rails'
+	gem 'guard-rspec'
+	gem 'spork', github: 'sporkrb/spork', branch: 'master'
+	gem 'spork-rails'
+	gem 'guard-spork'
+	gem 'childprocess'
 end
 
 group :test do
 	gem 'selenium-webdriver', '2.35.1'
-	gem 'capybara', '2.1.0'
+	gem 'capybara', '2.2.0'
+	gem 'libnotify', '0.8.0'
 end
 
 gem 'sass-rails', '4.0.1'
